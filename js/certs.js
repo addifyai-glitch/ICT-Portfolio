@@ -1,16 +1,23 @@
-(() => {
-  const grid = document.getElementById('certsGrid');
-  if (!grid || !window.CERTS) return;
+/* renders cert/badge cards from CERTS (data.js)
+   - if a cert has a non-empty `link`, render as a clickable verified badge
+   - otherwise render a clean static pill card */
+(function () {
+  const grid = document.getElementById("certsGrid");
+  if (!grid) return;
 
-  grid.innerHTML = CERTS.map(c => `
-    <div class="cert-card reveal">
-      <div class="cert-card__logo">${c.icon}</div>
+  grid.innerHTML = CERTS.map(c => {
+    const verify = c.link
+      ? `<span class="cert-card__verify">Verify &rarr;</span>`
+      : "";
+    const body = `
+      <div class="cert-badge">${c.abbr}</div>
       <div class="cert-card__body">
-        <p class="cert-card__name">${c.name}</p>
-        <p class="cert-card__issuer">${c.issuer}</p>
-        <p class="cert-card__date">${c.date}</p>
-        ${c.badge ? `<span class="cert-card__badge">${c.badge}</span>` : ''}
-      </div>
-    </div>
-  `).join('');
+        <strong>${c.name}</strong>
+        <span>${c.issuer}</span>
+        ${verify}
+      </div>`;
+    return c.link
+      ? `<a class="cert-card cert-card--link reveal" href="${c.link}" target="_blank" rel="noopener">${body}</a>`
+      : `<div class="cert-card reveal">${body}</div>`;
+  }).join("");
 })();

@@ -4,13 +4,11 @@
 
   grid.innerHTML = PROJECTS.map(p => `
     <div class="project-card reveal">
-      <div class="project-card__icon">${p.icon}</div>
       <p class="project-card__title">${p.title}</p>
-      <p class="project-card__desc">${p.description}</p>
+      <p class="project-card__desc">${p.desc}</p>
       <div class="project-card__tags">
         ${p.tags.map(t => `<span class="project-card__tag">${t}</span>`).join('')}
       </div>
-      ${p.link ? `<a href="${p.link}" target="_blank" rel="noopener" class="project-card__link">View project →</a>` : ''}
     </div>
   `).join('');
 })();

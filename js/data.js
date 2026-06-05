@@ -1,206 +1,72 @@
 /* ============================================================
-   data.js — single source of truth for all portfolio content
-   Edit this file to update skills, experience, projects, certs.
+   data.js — content updated from Irfan's resume (June 2026)
+   Public portfolio: professional content only.
    ============================================================ */
 
 window.SKILLS = [
-  {
-    category: "AI & Automation",
-    name: "MCP Server Engineering",
-    level: 90,
-    tags: ["Claude Code", "Agentic Workflows", "Tool Design", "JSON-RPC"]
-  },
-  {
-    category: "AI & Automation",
-    name: "Power Automate",
-    level: 88,
-    tags: ["Cloud Flows", "Desktop Flows", "AI Builder", "SharePoint"]
-  },
-  {
-    category: "AI & Automation",
-    name: "AI Agentic Workflows",
-    level: 85,
-    tags: ["Prompt Engineering", "Multi-step Agents", "Claude API", "Orchestration"]
-  },
-  {
-    category: "AI & Automation",
-    name: "AI Documentation Systems",
-    level: 82,
-    tags: ["Auto-generation", "Confluence", "Notion", "Knowledge Bases"]
-  },
-  {
-    category: "Cloud & Infrastructure",
-    name: "Microsoft Azure",
-    level: 80,
-    tags: ["Entra ID", "Virtual Machines", "Azure AD", "SSO"]
-  },
-  {
-    category: "Cloud & Infrastructure",
-    name: "Office 365 / M365",
-    level: 88,
-    tags: ["Exchange Online", "Teams", "SharePoint", "Intune"]
-  },
-  {
-    category: "Cloud & Infrastructure",
-    name: "Windows Server & AD",
-    level: 82,
-    tags: ["Active Directory", "Group Policy", "DNS", "DHCP"]
-  },
-  {
-    category: "Web Development",
-    name: "WordPress Development",
-    level: 78,
-    tags: ["Custom Themes", "Plugins", "WooCommerce", "ACF"]
-  },
-  {
-    category: "Web Development",
-    name: "HTML / CSS / JavaScript",
-    level: 80,
-    tags: ["Responsive Design", "Vanilla JS", "CSS Variables", "Vercel"]
-  },
-  {
-    category: "Studio & Operations",
-    name: "Post-Production Support",
-    level: 85,
-    tags: ["Avid Media Composer", "Shared Storage", "Render Pipelines", "Asset Management"]
-  },
-  {
-    category: "Studio & Operations",
-    name: "Studio Operations",
-    level: 83,
-    tags: ["Broadcast IT", "AV Systems", "Vendor Management", "On-air Support"]
-  },
-  {
-    category: "Collaboration",
-    name: "Global Team Coordination",
-    level: 87,
-    tags: ["Cross-functional", "Remote Teams", "Stakeholder Mgmt", "ITSM"]
-  }
+  { group: "AI & Automation",
+    items: ["Agentic AI workflows", "Power Automate", "AI documentation systems", "Prompt engineering (Claude, Copilot, ChatGPT)", "Workflow orchestration"] },
+  { group: "Post-Production & Studio Ops",
+    items: ["Studio equipment readiness", "User onboarding & workflow support", "Global team coordination", "Vendor & production partner comms", "AV/VC room support"] },
+  { group: "Cloud & Infrastructure",
+    items: ["Azure AD", "Office 365", "Exchange Online", "VMware ESXi", "Hyper-V", "Windows Server 2008-2019", "Linux Ubuntu", "macOS", "SCCM"] },
+  { group: "Enterprise Tools",
+    items: ["ServiceNow", "Jira", "Monday.com", "Adobe CC license mgmt", "Cheqroom", "Incident Management", "SharePoint design & automation", "SQL Server"] },
+  { group: "Web & Hosting",
+    items: ["WordPress site design", "Shared hosting management", "Hard-coded development", "addify.ae"] }
 ];
 
 window.EXPERIENCE = [
-  {
-    role: "IT Systems Engineer & AI Automation Specialist",
-    company: "Addify — Dubai, UAE",
-    date: "2022 — Present",
-    bullets: [
-      "Designed and deployed custom MCP servers enabling Claude-powered agentic workflows for internal and client automation use-cases.",
-      "Built Power Automate flows integrating SharePoint, Teams, and Azure services, eliminating repetitive manual tasks for cross-functional teams.",
-      "Engineered AI documentation systems that auto-generate technical runbooks and SOPs from workflow data.",
-      "Developed and maintained portfolio and client sites using WordPress and hard-coded HTML/CSS/JS on Vercel.",
-      "Managed Azure AD / Entra ID, Office 365, and endpoint infrastructure for the organisation."
-    ]
-  },
-  {
-    role: "IT Support & Studio Operations Engineer",
-    company: "Broadcast / Post-Production Studio — UAE",
-    date: "2018 — 2022",
-    bullets: [
-      "Provided Tier 2/3 IT support for Avid Media Composer edit suites, shared storage (Avid ISIS / NEXIS), and render pipelines.",
-      "Coordinated with global vendors and production teams to maintain zero-downtime post-production operations.",
-      "Managed Windows Server AD, Group Policy, DNS/DHCP, and backup systems for a 100+ user environment.",
-      "Deployed and maintained AV and broadcast infrastructure for live on-air and studio recording environments.",
-      "Onboarded and trained staff on M365, Teams, and internal ITSM ticketing workflows."
-    ]
-  },
-  {
-    role: "IT Support Technician",
-    company: "Systems Integrator — Pakistan",
-    date: "2015 — 2018",
-    bullets: [
-      "Installed and configured network infrastructure including switches, routers, and firewall appliances.",
-      "Provided desktop support, OS deployments, and software licensing across SMB clients.",
-      "Maintained documentation for client network topologies and IT asset inventories."
-    ]
-  }
+  { role: "CTE Support Engineer - LinkedIn", meta: "Graz, Austria | 2021 - Present",
+    points: [
+      "Post-production and studio operations support across global teams",
+      "Coordination with global vendors, production partners, and internal stakeholders",
+      "Studio environments, equipment readiness, and workflow troubleshooting",
+      "AI-powered automation pipelines using Power Automate and agentic AI",
+      "SharePoint sites, document libraries, and automated content flows",
+      "Improved ServiceNow (SNOW) and Jira workflows for SLA compliance",
+      "AI-generated documentation systems using Claude, Copilot, and custom scripts",
+      "AV/VC room setups, integrations, and hybrid meeting workflows"
+    ] },
+  { role: "IT Support Engineer & Helpdesk Team Leader - Al Sahraa Group", meta: "Abu Dhabi, UAE | 2014 - 2019",
+    points: [
+      "Led IT infrastructure projects: network design, server deployment, data center ops",
+      "Windows Server 2012/2016, Active Directory, GPOs, WDS, SCCM, firewalls",
+      "Supervised the IT Helpdesk with KPI-driven ticket resolution",
+      "Administered Office 365, SharePoint, Exchange 2013, MX configuration",
+      "Maintained LAN, routers, switches, APs, CCTV, DVR/NVR, enterprise hardware",
+      "Database backups, DR readiness, and virtual server maintenance"
+    ] },
+  { role: "IT Support Administrator - Al Sadaf Fashions", meta: "Abu Dhabi, UAE | 2011 - 2013",
+    points: [
+      "Managed IT Helpdesk operations and branch-level infrastructure",
+      "Configured servers, desktops, networks, and security policies",
+      "Windows Server 2008, Active Directory, Lotus Domino, secure data sharing",
+      "SQL Server, backups, and POS systems",
+      "Sales posting, barcode generation, pricing updates, data backups"
+    ] }
 ];
 
 window.PROJECTS = [
-  {
-    icon: "🤖",
-    title: "Claude Code MCP Server Suite",
-    description: "Custom MCP server toolkit exposing internal company tools — ticketing system, knowledge base search, and asset registry — as callable tools for Claude agentic sessions. Reduces context-switching by 60% for engineering workflows.",
-    tags: ["MCP", "Claude Code", "Node.js", "REST APIs"],
-    link: null
-  },
-  {
-    icon: "⚡",
-    title: "Power Automate Onboarding Pipeline",
-    description: "End-to-end employee onboarding automation flow: creates Entra ID account, licenses Office 365, provisions SharePoint access, sends welcome email, and logs the event — all triggered from a single Teams form submission.",
-    tags: ["Power Automate", "Entra ID", "M365", "SharePoint"],
-    link: null
-  },
-  {
-    icon: "📄",
-    title: "AI Runbook Generator",
-    description: "Agentic workflow that ingests existing Power Automate flow definitions and uses Claude to generate structured, human-readable SOPs and runbooks, exported to Confluence and SharePoint automatically.",
-    tags: ["Claude API", "Power Automate", "Confluence", "AI Docs"],
-    link: null
-  },
-  {
-    icon: "🌐",
-    title: "addify.ae — Agency Web Presence",
-    description: "Built and maintain the addify.ae WordPress site with custom theme, SEO optimisation, WooCommerce integration, and ongoing content management. Also manages DNS and hosting infrastructure.",
-    tags: ["WordPress", "WooCommerce", "SEO", "DNS"],
-    link: "https://addify.ae"
-  },
-  {
-    icon: "🎬",
-    title: "Post-Production Storage Automation",
-    description: "Scripted Avid NEXIS workspace provisioning and archive workflows using PowerShell. Reduced manual storage allocation time by 75% and enforced tiered retention policies automatically.",
-    tags: ["PowerShell", "Avid NEXIS", "Storage", "Scripting"],
-    link: null
-  },
-  {
-    icon: "🔐",
-    title: "Zero-Touch Endpoint Deployment",
-    description: "Implemented Microsoft Autopilot + Intune configuration profiles to achieve zero-touch Windows PC provisioning. Devices ship directly to end-users and self-configure to policy on first boot.",
-    tags: ["Intune", "Autopilot", "Azure AD", "Endpoint Mgmt"],
-    link: null
-  }
+  { title: "AI Agentic Workflow Demos", desc: "Multi-step agents that plan, call tools, and complete tasks autonomously.", tags: ["Agentic AI", "MCP"] },
+  { title: "Power Automate Pipelines", desc: "Business process automation across Office 365, approvals, and notifications.", tags: ["Power Automate", "O365"] },
+  { title: "AI Documentation Systems", desc: "Auto-generated SOPs and knowledge bases using Claude, Copilot, and scripts.", tags: ["AI", "Docs"] },
+  { title: "SharePoint Architecture", desc: "Site design, document libraries, permission models, and automated flows.", tags: ["SharePoint", "Automation"] },
+  { title: "WordPress + AI Hybrid", desc: "WordPress sites augmented with AI-assisted content and tooling.", tags: ["WordPress", "AI"] },
+  { title: "addify.ae", desc: "Hard-coded + WordPress hybrid Gulf careers and salary-benchmarking platform.", tags: ["Next.js", "WordPress"] }
 ];
 
+/* Set `link` to a real verification URL for a clickable verified badge;
+   leave "" to render a clean pill. */
 window.CERTS = [
-  {
-    icon: "🤖",
-    name: "Claude Code 101",
-    issuer: "Anthropic",
-    date: "2025",
-    badge: "Verified"
-  },
-  {
-    icon: "☁️",
-    name: "Microsoft Certified: Azure Fundamentals (AZ-900)",
-    issuer: "Microsoft",
-    date: "2023",
-    badge: "Active"
-  },
-  {
-    icon: "💼",
-    name: "Microsoft 365 Certified: Fundamentals (MS-900)",
-    issuer: "Microsoft",
-    date: "2023",
-    badge: "Active"
-  },
-  {
-    icon: "⚡",
-    name: "Power Platform Fundamentals (PL-900)",
-    issuer: "Microsoft",
-    date: "2024",
-    badge: "Active"
-  },
-  {
-    icon: "🔐",
-    name: "Microsoft Certified: Security, Compliance & Identity (SC-900)",
-    issuer: "Microsoft",
-    date: "2024",
-    badge: "Active"
-  },
-  {
-    icon: "🌐",
-    name: "ITIL® 4 Foundation",
-    issuer: "PeopleCert / Axelos",
-    date: "2022",
-    badge: "Active"
-  }
+  { abbr: "MCSA", name: "MCSA: Microsoft Certified System Administrator", issuer: "Microsoft | 2012", link: "" },
+  { abbr: "CC",   name: "Claude Code 101 Certification", issuer: "Anthropic", link: "" },
+  { abbr: "G",    name: "Google IT Support Professional", issuer: "Coursera | Jul 2020", link: "" },
+  { abbr: "SEC",  name: "IT Security: Defense Against Digital Dark Arts", issuer: "Coursera | Jun 2020", link: "" },
+  { abbr: "SYS",  name: "System Administration & IT Infrastructure Services", issuer: "Coursera | Jun 2020", link: "" },
+  { abbr: "365",  name: "MS Office 365 for Small Businesses", issuer: "AOE | Apr 2020", link: "" },
+  { abbr: "DITM", name: "Diploma in IT Management", issuer: "AOE | Sep 2016", link: "" },
+  { abbr: "ICC",  name: "Introduction to Cloud Computing", issuer: "Apr 2016", link: "" },
+  { abbr: "TP",   name: "TPNA SMB - TP-Link Network Associate", issuer: "TP-Link | Feb 2018", link: "" },
+  { abbr: "WP",   name: "WordPress - Blogging on the Web", issuer: "AOE | Mar 2016", link: "" }
 ];
