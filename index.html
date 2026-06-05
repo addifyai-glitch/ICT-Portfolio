@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============ SEO META ============ -->
+  <title>Irfan Younas — IT Systems Engineer & AI Automation Specialist</title>
+  <meta name="description" content="Portfolio of Irfan Younas: IT Systems Engineer, AI Automation Specialist, and Post-Production & Studio Operations Support. MCP servers, AI agentic workflows, Power Automate, and enterprise infrastructure." />
+  <meta name="keywords" content="Irfan Younas Portfolio, IT Systems Engineer, AI Automation, MCP Servers, Power Automate, Agentic AI, Studio Operations" />
+  <meta name="author" content="Irfan Younas" />
+  <link rel="canonical" href="https://portfolio.addify.ae/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Irfan Younas — IT Systems Engineer & AI Automation Specialist" />
+  <meta property="og:description" content="MCP servers, AI agentic workflows, Power Automate, and enterprise infrastructure." />
+  <meta property="og:url" content="https://portfolio.addify.ae/" />
+  <meta property="og:image" content="https://portfolio.addify.ae/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- JSON-LD structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Irfan Younas",
+    "jobTitle": "IT Systems Engineer & AI Automation Specialist",
+    "url": "https://portfolio.addify.ae",
+    "knowsAbout": ["MCP Servers", "AI Agentic Workflows", "Power Automate", "Azure", "Office 365", "WordPress"]
+  }
+  </script>
+</head>
+<body>
+  <!-- ambient background layers -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+  <div class="bg-noise" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#hero" class="nav__logo">IY<span>.</span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certs">Certs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <span class="theme-toggle__icon">☀</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============ A) HERO ============ -->
+    <section id="hero" class="hero" data-tilt>
+      <div class="hero__inner">
+        <p class="hero__eyebrow">// portfolio.addify.ae</p>
+        <h1 class="hero__name">Irfan Younas</h1>
+        <p class="hero__title">
+          IT Systems Engineer <span>•</span> AI Automation Specialist <span>•</span> Post-Production &amp; Studio Ops Support
+        </p>
+        <p class="hero__intro">
+          I engineer <strong>MCP servers</strong> and <strong>AI agentic workflows</strong>, design
+          <strong>Power Automate</strong> automation, and run enterprise tooling and cloud
+          infrastructure. I bridge studio operations and IT, collaborating across global,
+          cross-functional teams to keep systems and people moving.
+        </p>
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero__orbit" aria-hidden="true">
+        <div class="orbit-ring"></div>
+        <div class="orbit-ring orbit-ring--2"></div>
+        <div class="orbit-core"></div>
+      </div>
+    </section>
+
+    <!-- ============ B) ABOUT ============ -->
+    <section id="about" class="section">
+      <h2 class="section__title"><span class="section__num">01</span> About</h2>
+      <div class="about">
+        <p>
+          IT systems engineer and automation specialist with a track record spanning enterprise
+          infrastructure, AI workflow engineering, and post-production studio operations. I design
+          and ship <strong>MCP servers</strong> and <strong>AI agentic workflows</strong>, build
+          <strong>Power Automate</strong> processes, and automate documentation systems that remove
+          manual toil from technical teams.
+        </p>
+        <ul class="about__highlights">
+          <li>MCP server design &amp; AI agentic workflow engineering</li>
+          <li>Claude Code 101 Certified</li>
+          <li>Power Automate workflow design &amp; AI documentation systems</li>
+          <li>Post-production &amp; studio operations support</li>
+          <li>WordPress + hard-coded web development (addify.ae)</li>
+          <li>Global team &amp; vendor collaboration</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ C) SKILLS MATRIX ============ -->
+    <section id="skills" class="section">
+      <h2 class="section__title"><span class="section__num">02</span> Skills Matrix</h2>
+      <div class="skills" id="skillsGrid"><!-- populated by js/skills.js --></div>
+    </section>
+
+    <!-- ============ D) EXPERIENCE ============ -->
+    <section id="experience" class="section">
+      <h2 class="section__title"><span class="section__num">03</span> Experience</h2>
+      <div class="timeline" id="experienceList"><!-- populated by js/experience.js --></div>
+    </section>
+
+    <!-- ============ E) AI PROJECTS ============ -->
+    <section id="projects" class="section">
+      <h2 class="section__title"><span class="section__num">04</span> AI Projects</h2>
+      <div class="projects" id="projectsGrid"><!-- populated by js/projects.js --></div>
+    </section>
+
+    <!-- ============ F) CERTIFICATIONS ============ -->
+    <section id="certs" class="section">
+      <h2 class="section__title"><span class="section__num">05</span> Licenses &amp; Certifications</h2>
+      <div class="certs" id="certsGrid"><!-- populated by js/certs.js --></div>
+    </section>
+
+    <!-- ============ G) CONTACT ============ -->
+    <section id="contact" class="section">
+      <h2 class="section__title"><span class="section__num">06</span> Contact</h2>
+      <div class="contact">
+        <p class="contact__lead">Open to automation, AI, and IT engineering work. Reach out directly.</p>
+        <div class="contact__actions">
+          <a href="mailto:irfan@addify.ae" class="btn btn--primary">irfan@addify.ae</a>
+          <a href="https://www.linkedin.com/in/ifran-younas-71b53b215/" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn →</a>
+        </div>
+
+        <div class="contact__form" id="contactForm">
+          <input type="text" id="cf_name" placeholder="Your name" autocomplete="name" />
+          <input type="email" id="cf_email" placeholder="Your email" autocomplete="email" />
+          <textarea id="cf_message" placeholder="Your message" rows="4"></textarea>
+          <button type="button" id="cf_submit" class="btn btn--primary">Send message</button>
+          <p class="contact__status" id="cf_status" role="status"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Irfan Younas — built &amp; deployed on Vercel.</p>
+  </footer>
+
+  <!-- modular scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/skills.js"></script>
+  <script src="js/experience.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/certs.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
