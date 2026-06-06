@@ -70,3 +70,23 @@ window.CERTS = [
   { abbr: "TP",   name: "TPNA SMB - TP-Link Network Associate", issuer: "TP-Link | Feb 2018", link: "" },
   { abbr: "WP",   name: "WordPress - Blogging on the Web", issuer: "AOE | Mar 2016", link: "" }
 ];
+
+window.MS_LEARN_PROFILE = "https://learn.microsoft.com/en-us/users/irfanyounas-1450/";
+window.MS_LEARN_STATS   = { badges: 42, trophies: 6, level: 8 };
+
+/* Curated highlights (~12). Full 42 live behind the profile link.
+   To swap entries: keep the array ~12 so the section stays scannable. */
+window.MS_LEARN = [
+  { name: "Azure Virtual Desktop Architecture",                                      category: "Azure",        type: "badge",  status: "completed" },
+  { name: "Prepare on-premises workloads for migration to Azure",                   category: "Azure",        type: "badge",  status: "completed" },
+  { name: "Set up Azure Migrate for server migration",                              category: "Azure",        type: "badge",  status: "completed" },
+  { name: "Introduction to the Microsoft Azure Well-Architected Framework",         category: "Azure",        type: "badge",  status: "completed" },
+  { name: "Microsoft Cloud Adoption Framework for Azure",                           category: "Azure",        type: "badge",  status: "completed" },
+  { name: "AZ-305 Microsoft Azure Architect Design Prerequisites",                  category: "Azure",        type: "path",   status: "completed" },
+  { name: "Implement Copilot for Microsoft 365",                                    category: "AI",           type: "badge",  status: "completed" },
+  { name: "Examine data security and compliance in Copilot for Microsoft 365",     category: "AI",           type: "badge",  status: "completed" },
+  { name: "MS-012 Prepare your organization for Copilot for Microsoft 365",        category: "AI",           type: "path",   status: "completed" },
+  { name: "Implement lifecycle management and governance for Microsoft Teams",      category: "M365",         type: "badge",  status: "completed" },
+  { name: "Understand Microsoft Entra ID",                                          category: "M365",         type: "badge",  status: "completed" },
+  { name: "Microsoft Azure Fundamentals: Describe Azure architecture and services", category: "Fundamentals", type: "path",   status: "completed" },
+];

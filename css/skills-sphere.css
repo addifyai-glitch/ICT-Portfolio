@@ -1,0 +1,102 @@
+/* ============================================================
+   skills-sphere.css — styles for the 3D skills sphere module
+   Uses your existing theme vars (--neon, --panel, --border, etc.)
+   with safe fallbacks so it works even if loaded standalone.
+   ============================================================ */
+
+.sph {
+  --sph-size: 360px;
+  margin-top: 2rem;
+  border: 1px solid var(--border, rgba(255,255,255,.08));
+  border-radius: var(--radius, 16px);
+  background: var(--bg-card, #141826);
+  overflow: hidden;
+}
+
+.sph__bar {
+  display: flex; align-items: center; gap: 1rem;
+  padding: .85rem 1rem; border-bottom: 1px solid var(--border, rgba(255,255,255,.08));
+}
+.sph__modes { display: flex; gap: .35rem; background: var(--bg-card-2, #1b2034); border-radius: 999px; padding: .25rem; }
+.sph__mode {
+  border: 0; background: transparent; color: var(--text-muted, #97a0bd);
+  padding: .45rem .9rem; border-radius: 999px; cursor: pointer;
+  font-family: var(--font-display, sans-serif); font-size: .85rem; transition: all .2s;
+}
+.sph__mode.is-active { background: var(--neon, #6384ff); color: #fff; font-weight: 600; }
+.sph__collapse {
+  margin-left: auto; border: 1px solid var(--border, rgba(255,255,255,.08));
+  background: transparent; color: var(--text, #f5f7fb); border-radius: 8px;
+  padding: .4rem .8rem; cursor: pointer; font-size: .8rem;
+}
+
+.sph__stage {
+  position: relative; height: 460px;
+  display: grid; place-items: center;
+  perspective: 1000px; overflow: hidden;
+  transition: height .35s ease, opacity .35s ease;
+}
+.sph__stage.is-collapsed { height: 0; opacity: 0; pointer-events: none; }
+
+.sph__glow {
+  position: absolute; width: var(--sph-size); height: var(--sph-size);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, color-mix(in srgb, var(--neon, #6384ff) 22%, transparent), transparent 65%);
+  filter: blur(28px); animation: sphPulse 5s ease-in-out infinite;
+}
+@keyframes sphPulse { 0%,100% { opacity:.55; transform: scale(1);} 50% { opacity:.9; transform: scale(1.06);} }
+
+.sph__world {
+  position: relative; width: var(--sph-size); height: var(--sph-size);
+  transform-style: preserve-3d; cursor: grab;
+}
+.sph__world:active { cursor: grabbing; }
+
+.sph__tag {
+  position: absolute; top: 50%; left: 50%;
+  border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
+  background: color-mix(in srgb, var(--c) 12%, var(--bg-card, #141826));
+  color: var(--text, #f5f7fb);
+  padding: .3rem .6rem; border-radius: 8px; white-space: nowrap;
+  font-family: var(--font-mono, monospace); font-size: .72rem; cursor: pointer;
+  box-shadow: 0 0 12px color-mix(in srgb, var(--c) 25%, transparent);
+  transition: background .2s, border-color .2s, box-shadow .2s;
+}
+.sph__tag:hover, .sph__tag.is-pinned {
+  background: var(--c); color: #fff; border-color: var(--c);
+  box-shadow: 0 0 22px var(--c);
+}
+
+/* tag-cloud mode: flatten into a centered wrapped flow */
+.sph__world.is-cloud {
+  transform: none !important; width: min(90%, 640px); height: auto;
+  display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center; align-content: center;
+}
+.sph__world.is-cloud .sph__tag {
+  position: static; transform: none !important; opacity: 1 !important;
+  font-size: .8rem; padding: .4rem .75rem;
+}
+
+.sph__hint {
+  position: absolute; bottom: .8rem; left: 0; right: 0; text-align: center;
+  color: var(--text-muted, #97a0bd); font-size: .72rem; pointer-events: none;
+}
+.sph__world.is-cloud ~ .sph__hint { display: none; }
+
+.sph__tip {
+  display: grid; gap: .15rem; padding: 1rem 1.1rem;
+  border-top: 1px solid var(--border, rgba(255,255,255,.08));
+  background: var(--bg-card-2, #1b2034);
+}
+.sph__tip strong { font-size: 1rem; }
+.sph__tip-cat { font-family: var(--font-mono, monospace); font-size: .78rem; }
+.sph__tip-lvl { color: var(--text, #f5f7fb); font-size: .82rem; }
+.sph__tip-desc { color: var(--text-muted, #97a0bd); font-size: .85rem; }
+
+@media (max-width: 680px) {
+  .sph__stage { height: 360px; }
+  .sph { --sph-size: 280px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sph__glow { animation: none; }
+}

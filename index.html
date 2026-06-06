@@ -36,6 +36,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/skills-sphere.css" />
+  <link rel="stylesheet" href="css/ms-learn.css" />
 
   <!-- JSON-LD structured data -->
   <script type="application/ld+json">
@@ -65,6 +67,7 @@
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a href="#certs">Certs</a>
+      <a href="#ms-learn">MS Learn</a>
       <a href="#contact">Contact</a>
     </nav>
     <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
@@ -125,6 +128,7 @@
     <section id="skills" class="section">
       <h2 class="section__title"><span class="section__num">02</span> Skills Matrix</h2>
       <div class="skills" id="skillsGrid"><!-- populated by js/skills.js --></div>
+      <div id="skillsSphere"></div>
     </section>
 
     <!-- ============ D) EXPERIENCE ============ -->
@@ -145,9 +149,42 @@
       <div class="certs" id="certsGrid"><!-- populated by js/certs.js --></div>
     </section>
 
-    <!-- ============ G) CONTACT ============ -->
+    <!-- ============ G) MS LEARN ============ -->
+    <section id="ms-learn" class="section">
+      <h2 class="section__title"><span class="section__num">06</span> Microsoft Learning</h2>
+      <div class="ms-learn">
+        <div class="ms-learn__header">
+          <!-- inline SVG monogram — original geometric mark, not Microsoft's trademark logo -->
+          <svg class="ms-learn__monogram" viewBox="0 0 56 56" width="56" height="56" aria-hidden="true">
+            <rect x="3"  y="3"  width="23" height="23" rx="4" fill="#0078d4"/>
+            <rect x="30" y="3"  width="23" height="23" rx="4" fill="#50e6ff"/>
+            <rect x="3"  y="30" width="23" height="23" rx="4" fill="#50e6ff" opacity=".72"/>
+            <rect x="30" y="30" width="23" height="23" rx="4" fill="#0078d4" opacity=".72"/>
+          </svg>
+          <div class="ms-learn__header-text">
+            <p class="ms-learn__header-title">Microsoft Learning</p>
+            <p class="ms-learn__header-sub">Continuous learning on Microsoft Learn — modules, paths, and badges.</p>
+          </div>
+          <a href="https://learn.microsoft.com/en-us/users/irfanyounas-1450/" target="_blank" rel="noopener" class="btn btn--ghost ms-learn__profile-btn">View Microsoft Learn Profile →</a>
+        </div>
+
+        <div class="ms-learn__stats" id="msLearnStats"><!-- populated by js/ms-learn.js --></div>
+
+        <div class="ms-learn__filters" role="group" aria-label="Filter by category">
+          <button class="ms-learn__chip is-active" data-cat="all">All</button>
+          <button class="ms-learn__chip" data-cat="Azure">Azure</button>
+          <button class="ms-learn__chip" data-cat="M365">M365</button>
+          <button class="ms-learn__chip" data-cat="Security">Security</button>
+          <button class="ms-learn__chip" data-cat="AI">AI</button>
+          <button class="ms-learn__chip" data-cat="Fundamentals">Fundamentals</button>
+        </div>
+        <div class="ms-learn__grid" id="msLearnGrid"><!-- populated by js/ms-learn.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ H) CONTACT ============ -->
     <section id="contact" class="section">
-      <h2 class="section__title"><span class="section__num">06</span> Contact</h2>
+      <h2 class="section__title"><span class="section__num">07</span> Contact</h2>
       <div class="contact">
         <p class="contact__lead">Open to automation, AI, and IT engineering work. Reach out directly.</p>
         <div class="contact__actions">
@@ -176,7 +213,9 @@
   <script src="js/experience.js"></script>
   <script src="js/projects.js"></script>
   <script src="js/certs.js"></script>
+  <script src="js/ms-learn.js"></script>
   <script src="js/main.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/skills-sphere.js"></script>
 </body>
 </html>

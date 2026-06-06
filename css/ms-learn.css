@@ -1,0 +1,248 @@
+/* ============================================================
+   ms-learn.css — Microsoft Learning Achievements section
+   Uses existing theme vars (--neon, --accent, --border, etc.)
+   ============================================================ */
+
+/* ---- section header ---- */
+.ms-learn__header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+}
+
+.ms-learn__monogram {
+  flex-shrink: 0;
+  border-radius: 10px;
+  animation: msMonoPulse 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px rgba(0,120,212,.35));
+}
+
+@keyframes msMonoPulse {
+  0%, 100% { filter: drop-shadow(0 0 6px rgba(0,120,212,.35)); transform: scale(1); }
+  50%       { filter: drop-shadow(0 0 14px rgba(80,230,255,.55)); transform: scale(1.04); }
+}
+
+.ms-learn__header-text {
+  flex: 1;
+  min-width: 160px;
+}
+
+.ms-learn__header-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: .2rem;
+  color: var(--text);
+}
+
+.ms-learn__header-sub {
+  color: var(--text-muted);
+  font-size: .88rem;
+}
+
+/* ---- stats banner ---- */
+.ms-learn__stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.ms-stat {
+  flex: 1;
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.1rem .75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.ms-stat:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+.ms-stat__num {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, #0078d4, #50e6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: .3rem;
+}
+
+.ms-stat__lbl {
+  font-size: .78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-family: var(--font-mono);
+}
+
+.ms-learn__profile-btn {
+  white-space: nowrap;
+}
+
+/* ---- filter chips ---- */
+.ms-learn__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ms-learn__chip {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  padding: .4rem .85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  transition: all var(--transition);
+}
+
+.ms-learn__chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.ms-learn__chip.is-active {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ---- grid ---- */
+.ms-learn__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* ---- card ---- */
+.ms-card {
+  display: flex;
+  align-items: flex-start;
+  gap: .85rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.ms-card:hover {
+  transform: perspective(600px) rotateX(2deg) rotateY(-2deg) translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.ms-card.is-hidden {
+  display: none;
+}
+
+/* ---- card icon ---- */
+.ms-card__icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  animation: msIconGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes msIconGlow {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: .72; filter: brightness(1.25); }
+}
+
+.ms-card__icon--badge    { background: linear-gradient(135deg, #0078d4, #50e6ff); }
+.ms-card__icon--module   { background: linear-gradient(135deg, #7b2fff, #b579ff); }
+.ms-card__icon--path     { background: linear-gradient(135deg, #0ea47a, #3dddb5); }
+.ms-card__icon--trophy   { background: linear-gradient(135deg, #d97706, #fcd34d); }
+
+/* ---- card body ---- */
+.ms-card__body { flex: 1; min-width: 0; }
+
+.ms-card__name {
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: .4rem;
+}
+
+.ms-card__meta {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  flex-wrap: wrap;
+}
+
+.ms-card__cat {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .1rem .4rem;
+}
+
+.ms-card__status {
+  font-size: .72rem;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: .1rem .45rem;
+}
+
+.ms-card__status--completed    { background: rgba(52,211,153,.15); color: #34d399; }
+.ms-card__status--in-progress  { background: rgba(251,191,36,.15);  color: #fbbf24; }
+
+/* ---- trophy shimmer ---- */
+.ms-card--trophy::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(217,119,6,.09) 50%, transparent 60%);
+  background-size: 200% 100%;
+  animation: msShimmer 2.4s linear infinite;
+}
+
+@keyframes msShimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ---- reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .ms-learn__monogram,
+  .ms-card__icon,
+  .ms-card--trophy::before { animation: none; }
+  .ms-card:hover,
+  .ms-stat:hover           { transform: none; }
+}
+
+@media (max-width: 600px) {
+  .ms-learn__header { flex-direction: column; align-items: flex-start; }
+  .ms-learn__grid   { grid-template-columns: 1fr; }
+}
