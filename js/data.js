@@ -30,7 +30,7 @@ window.EXPERIENCE = [
       "AI-generated documentation systems using Claude, Copilot, and custom scripts",
       "AV/VC room setups, integrations, and hybrid meeting workflows"
     ] },
-  { role: "Dispatch Engineer / Data Center & Remote Hands Support - Self-Employed", meta: "Europe | Apr 2020 - May 2021",
+  { role: "Dispatch Engineer / Data Center & Remote Hands Support - Self-Employed", meta: "Austria | Apr 2020 - May 2021",
     points: [
       "On-site dispatch and remote-hands support across enterprise data centers",
       "Production hardware support under strict SLAs; faulty-part replacement for servers and storage",
