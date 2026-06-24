@@ -11,7 +11,7 @@ window.SKILLS = [
   { group: "Cloud & Infrastructure",
     items: ["Azure AD", "Office 365", "Exchange Online", "VMware ESXi", "Hyper-V", "Windows Server 2008-2019", "Linux Ubuntu", "macOS", "SCCM"] },
   { group: "Data Center & Network Support",
-    items: ["Data center remote hands", "Dell EMC storage", "Hardware diagnostics", "Faulty-part replacement", "Server & storage support", "Network switch config", "SD-WAN migration", "SLA-driven support", "Structured cabling"] },
+    items: ["Data center remote hands", "Dell EMC storage", "Hardware diagnostics", "Faulty-part replacement", "Server & storage support", "Network switch config", "SD-WAN migration", "SLA-driven support"] },
   { group: "Enterprise Tools",
     items: ["ServiceNow", "Jira", "Monday.com", "Adobe CC license mgmt", "Cheqroom", "Incident Management", "SharePoint design & automation", "SQL Server"] },
   { group: "Web & Hosting",
@@ -65,9 +65,7 @@ window.PROJECTS = [
   { title: "AI Documentation Systems", desc: "Auto-generated SOPs and knowledge bases using Claude, Copilot, and scripts.", tags: ["AI", "Docs"] },
   { title: "SharePoint Architecture", desc: "Site design, document libraries, permission models, and automated flows.", tags: ["SharePoint", "Automation"] },
   { title: "WordPress + AI Hybrid", desc: "WordPress sites augmented with AI-assisted content and tooling.", tags: ["WordPress", "AI"] },
-  { title: "addify.ae", desc: "Custom-coded + WordPress hybrid Gulf careers and salary-benchmarking platform.", tags: ["Next.js", "WordPress"] },
-  { title: "addifyshop.com", desc: "E-commerce store for tech gadgets, home, and lifestyle products.", tags: ["E-commerce", "Shopify"] },
-  { title: "tours.addify.ae", desc: "Tourism in UAE — destination and experiences microsite.", tags: ["Web", "Travel"] }
+  { title: "addify.ae", desc: "Custom-coded + WordPress hybrid Gulf careers and salary-benchmarking platform.", tags: ["Next.js", "WordPress"] }
 ];
 
 /* Set `link` to a real verification URL for a clickable verified badge;
