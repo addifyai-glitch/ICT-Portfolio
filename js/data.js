@@ -10,10 +10,12 @@ window.SKILLS = [
     items: ["Studio equipment readiness", "User onboarding & workflow support", "Global team coordination", "Vendor & production partner comms", "AV/VC room support"] },
   { group: "Cloud & Infrastructure",
     items: ["Azure AD", "Office 365", "Exchange Online", "VMware ESXi", "Hyper-V", "Windows Server 2008-2019", "Linux Ubuntu", "macOS", "SCCM"] },
+  { group: "Data Center & Network Support",
+    items: ["Data center remote hands", "Dell EMC storage", "Hardware diagnostics", "Faulty-part replacement", "Server & storage support", "Network switch config", "SD-WAN migration", "SLA-driven support", "Structured cabling"] },
   { group: "Enterprise Tools",
     items: ["ServiceNow", "Jira", "Monday.com", "Adobe CC license mgmt", "Cheqroom", "Incident Management", "SharePoint design & automation", "SQL Server"] },
   { group: "Web & Hosting",
-    items: ["WordPress site design", "Shared hosting management", "Hard-coded development", "addify.ae"] }
+    items: ["WordPress site design", "Shared hosting management", "Custom-coded development", "addify.ae"] }
 ];
 
 window.EXPERIENCE = [
@@ -27,6 +29,16 @@ window.EXPERIENCE = [
       "Improved ServiceNow (SNOW) and Jira workflows for SLA compliance",
       "AI-generated documentation systems using Claude, Copilot, and custom scripts",
       "AV/VC room setups, integrations, and hybrid meeting workflows"
+    ] },
+  { role: "Dispatch Engineer / Data Center & Remote Hands Support - Self-Employed", meta: "Europe | Apr 2020 - May 2021",
+    points: [
+      "On-site dispatch and remote-hands support across enterprise data centers",
+      "Production hardware support under strict SLAs; faulty-part replacement for servers and storage",
+      "Dell EMC storage installation, configuration, and diagnostics",
+      "Hardware diagnostics and component-level troubleshooting",
+      "Network support: switch configuration, structured cabling, and connectivity checks",
+      "SD-WAN migration support and remote-hands coordination",
+      "Dispatched to enterprise sites via field-service partners including AVASO Technology, Ubique, HCL, NTT GN, Force Era, and Canon Europa"
     ] },
   { role: "IT Support Engineer & Helpdesk Team Leader - Al Sahraa Group", meta: "Abu Dhabi, UAE | 2014 - 2019",
     points: [
@@ -53,7 +65,9 @@ window.PROJECTS = [
   { title: "AI Documentation Systems", desc: "Auto-generated SOPs and knowledge bases using Claude, Copilot, and scripts.", tags: ["AI", "Docs"] },
   { title: "SharePoint Architecture", desc: "Site design, document libraries, permission models, and automated flows.", tags: ["SharePoint", "Automation"] },
   { title: "WordPress + AI Hybrid", desc: "WordPress sites augmented with AI-assisted content and tooling.", tags: ["WordPress", "AI"] },
-  { title: "addify.ae", desc: "Hard-coded + WordPress hybrid Gulf careers and salary-benchmarking platform.", tags: ["Next.js", "WordPress"] }
+  { title: "addify.ae", desc: "Custom-coded + WordPress hybrid Gulf careers and salary-benchmarking platform.", tags: ["Next.js", "WordPress"] },
+  { title: "addifyshop.com", desc: "E-commerce store for tech gadgets, home, and lifestyle products.", tags: ["E-commerce", "Shopify"] },
+  { title: "tours.addify.ae", desc: "Tourism in UAE — destination and experiences microsite.", tags: ["Web", "Travel"] }
 ];
 
 /* Set `link` to a real verification URL for a clickable verified badge;
