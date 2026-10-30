@@ -23,13 +23,18 @@
     { name: "Prompt Eng.",     cat: "AI & Automation",             level: "Advanced",   desc: "Claude, Copilot, and ChatGPT workflow design." },
     { name: "AI Docs",         cat: "AI & Automation",             level: "Proficient", desc: "Auto-generated SOPs and knowledge bases." },
 
-    { name: "Azure AD",        cat: "Cloud & Infrastructure",      level: "Proficient", desc: "Identity, access, and tenant administration." },
-    { name: "Office 365",      cat: "Cloud & Infrastructure",      level: "Advanced",   desc: "Admin, Exchange Online, and SharePoint." },
+    { name: "Microsoft 365",   cat: "Cloud & Infrastructure",      level: "Advanced",   desc: "Tenant administration, Exchange Online, and SharePoint." },
+    { name: "Intune",          cat: "Cloud & Infrastructure",      level: "Proficient", desc: "Endpoint management and device policies." },
+    { name: "Entra ID",        cat: "Cloud & Infrastructure",      level: "Proficient", desc: "Identity, access, and tenant administration (formerly Azure AD)." },
     { name: "VMware ESXi",     cat: "Cloud & Infrastructure",      level: "Proficient", desc: "Virtualization and host management." },
     { name: "Hyper-V",         cat: "Cloud & Infrastructure",      level: "Proficient", desc: "Windows virtualization environments." },
     { name: "Windows Server",  cat: "Cloud & Infrastructure",      level: "Advanced",   desc: "Server 2008–2019, AD, GPOs, SCCM." },
     { name: "Linux",           cat: "Cloud & Infrastructure",      level: "Working",    desc: "Ubuntu administration." },
 
+    { name: "Cond. Access",    cat: "Cloud & Infrastructure",      level: "Working",    desc: "Conditional Access policies in Microsoft 365 / Entra ID." },
+    { name: "DLP",             cat: "Cloud & Infrastructure",      level: "Working",    desc: "Data loss prevention and compliance policies in Microsoft 365." },
+
+    { name: "JSM",             cat: "Enterprise Tools",            level: "Proficient", desc: "Atlassian Cloud admin: Jira Service Management permissions & workflows." },
     { name: "ServiceNow",      cat: "Enterprise Tools",            level: "Advanced",   desc: "Ticket routing, escalation, SLA workflows." },
     { name: "Jira",            cat: "Enterprise Tools",            level: "Advanced",   desc: "Workflow and issue management." },
     { name: "Monday.com",      cat: "Enterprise Tools",            level: "Proficient", desc: "Project and task coordination." },
@@ -43,7 +48,7 @@
 
     { name: "WordPress",       cat: "Web & Hosting",               level: "Proficient", desc: "Site design and theme work." },
     { name: "Shared Hosting",  cat: "Web & Hosting",               level: "Proficient", desc: "cPanel, DNS, and hosting management." },
-    { name: "addify.ae",       cat: "Web & Hosting",               level: "Advanced",   desc: "Hard-coded + WordPress hybrid platform." }
+    { name: "addify.ae",       cat: "Web & Hosting",               level: "Advanced",   desc: "Custom-coded + WordPress hybrid platform." }
   ];
 
   // ---- build DOM ----

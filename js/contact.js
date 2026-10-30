@@ -67,7 +67,7 @@
   function fallbackMailto(name, email, message) {
     const subject = encodeURIComponent(`Portfolio enquiry from ${name}`);
     const body    = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:irfan@addify.ae?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hi@addify.ae?subject=${subject}&body=${body}`;
     setStatus('Opening your email client…');
   }
 })();

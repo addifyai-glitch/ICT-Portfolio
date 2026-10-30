@@ -1,26 +1,28 @@
 /* ============================================================
-   data.js — content updated from Irfan's resume (June 2026)
+   data.js — content updated from Irfan's resume (June 2026; enterprise IT refresh Oct 2026)
    Public portfolio: professional content only.
    ============================================================ */
 
 window.SKILLS = [
-  { group: "AI & Automation",
-    items: ["Agentic AI workflows", "Power Automate", "AI documentation systems", "Prompt engineering (Claude, Copilot, ChatGPT)", "Workflow orchestration"] },
-  { group: "Post-Production & Studio Ops",
-    items: ["Studio equipment readiness", "User onboarding & workflow support", "Global team coordination", "Vendor & production partner comms", "AV/VC room support"] },
   { group: "Cloud & Infrastructure",
-    items: ["Azure AD", "Office 365", "Exchange Online", "VMware ESXi", "Hyper-V", "Windows Server 2008-2019", "Linux Ubuntu", "macOS", "SCCM"] },
+    items: ["Microsoft 365 administration", "Microsoft Intune (endpoint management)", "Identity & access (Entra ID)", "Exchange Online administration", "Conditional Access", "Data Loss Prevention (DLP)", "Endpoint compliance (Intune)", "VMware ESXi", "Hyper-V", "Windows Server 2008-2019", "Linux Ubuntu", "macOS", "SCCM"] },
+  { group: "AI & Automation",
+    items: ["Agentic AI workflows", "AI-assisted development", "Power Automate", "AI documentation systems", "Prompt engineering (Claude, Copilot, ChatGPT)", "Workflow orchestration"] },
+  { group: "Enterprise Tools",
+    items: ["Atlassian Cloud administration", "Jira Service Management (permissions & workflows)", "ServiceNow", "Jira", "Monday.com", "Adobe CC license mgmt", "Cheqroom", "Incident Management", "SharePoint design & automation", "SQL Server"] },
   { group: "Data Center & Network Support",
     items: ["Data center remote hands", "Dell EMC storage", "Hardware diagnostics", "Faulty-part replacement", "Server & storage support", "Network switch config", "SD-WAN migration", "SLA-driven support"] },
-  { group: "Enterprise Tools",
-    items: ["ServiceNow", "Jira", "Monday.com", "Adobe CC license mgmt", "Cheqroom", "Incident Management", "SharePoint design & automation", "SQL Server"] },
+  { group: "Post-Production & Studio Ops",
+    items: ["Studio equipment readiness", "User onboarding & workflow support", "Global team coordination", "Vendor & production partner comms", "AV/VC room support"] },
   { group: "Web & Hosting",
-    items: ["WordPress site design", "Shared hosting management", "Custom-coded development", "addify.ae"] }
+    items: ["WordPress site design", "Shared hosting management", "Custom-coded development", "Basic backend integration (Supabase)", "addify.ae"] }
 ];
 
 window.EXPERIENCE = [
-  { role: "CTE Support Engineer - LinkedIn", meta: "Graz, Austria | 2021 - Present",
+  { role: "CTE Support Engineer - LinkedIn", meta: "Graz, Austria | Aug 2021 – Oct 2026",
     points: [
+      "Microsoft 365 administration: Intune endpoint management, Entra ID identity & access, and Exchange Online",
+      "Atlassian Cloud administration: Jira Service Management permissions and workflows",
       "Post-production and studio operations support across global teams",
       "Coordination with global vendors, production partners, and internal stakeholders",
       "Studio environments, equipment readiness, and workflow troubleshooting",
@@ -30,7 +32,7 @@ window.EXPERIENCE = [
       "AI-generated documentation systems using Claude, Copilot, and custom scripts",
       "AV/VC room setups, integrations, and hybrid meeting workflows"
     ] },
-  { role: "Dispatch Engineer / Data Center & Remote Hands Support - Self-Employed", meta: "Austria | Apr 2020 - May 2021",
+  { role: "Dispatch Engineer / Data Center & Remote Hands Support - Self-Employed", meta: "Austria | Apr 2020 – May 2021",
     points: [
       "On-site dispatch and remote-hands support across enterprise data centers",
       "Production hardware support under strict SLAs; faulty-part replacement for servers and storage",
@@ -40,7 +42,7 @@ window.EXPERIENCE = [
       "SD-WAN migration support and remote-hands coordination",
       "Dispatched to enterprise sites via field-service partners including AVASO Technology, Ubique, HCL, NTT GN, Force Era, and Canon Europa"
     ] },
-  { role: "IT Support Engineer & Helpdesk Team Leader - Al Sahraa Group", meta: "Abu Dhabi, UAE | 2014 - 2019",
+  { role: "IT Support Engineer & Helpdesk Team Leader - Al Sahraa Group", meta: "Abu Dhabi, UAE | 2014 – 2019",
     points: [
       "Led IT infrastructure projects: network design, server deployment, data center ops",
       "Windows Server 2012/2016, Active Directory, GPOs, WDS, SCCM, firewalls",
@@ -49,7 +51,7 @@ window.EXPERIENCE = [
       "Maintained LAN, routers, switches, APs, CCTV, DVR/NVR, enterprise hardware",
       "Database backups, DR readiness, and virtual server maintenance"
     ] },
-  { role: "IT Support Administrator - Al Sadaf Fashions", meta: "Abu Dhabi, UAE | 2011 - 2013",
+  { role: "IT Support Administrator - Al Sadaf Fashions", meta: "Abu Dhabi, UAE | 2011 – 2013",
     points: [
       "Managed IT Helpdesk operations and branch-level infrastructure",
       "Configured servers, desktops, networks, and security policies",
@@ -60,7 +62,7 @@ window.EXPERIENCE = [
 ];
 
 window.PROJECTS = [
-  { title: "AI Agentic Workflow Demos", desc: "Multi-step agents that plan, call tools, and complete tasks autonomously.", tags: ["Agentic AI", "MCP"] },
+  { title: "AI Agentic Workflow Demos", desc: "Building and using multi-step agentic workflows that plan, call tools, and complete tasks.", tags: ["Agentic AI", "AI tools"] },
   { title: "Power Automate Pipelines", desc: "Business process automation across Office 365, approvals, and notifications.", tags: ["Power Automate", "O365"] },
   { title: "AI Documentation Systems", desc: "Auto-generated SOPs and knowledge bases using Claude, Copilot, and scripts.", tags: ["AI", "Docs"] },
   { title: "SharePoint Architecture", desc: "Site design, document libraries, permission models, and automated flows.", tags: ["SharePoint", "Automation"] },
