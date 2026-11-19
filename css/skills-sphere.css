@@ -6,7 +6,7 @@
 
 .sph {
   --sph-size: 360px;
-  margin-top: 2rem;
+  margin-top: var(--space-block, 2rem);
   border: 1px solid var(--border, rgba(255,255,255,.08));
   border-radius: var(--radius, 16px);
   background: var(--bg-card, #141826);
@@ -23,7 +23,7 @@
   padding: .45rem .9rem; border-radius: 999px; cursor: pointer;
   font-family: var(--font-display, sans-serif); font-size: .85rem; transition: all .2s;
 }
-.sph__mode.is-active { background: var(--neon, #6384ff); color: #fff; font-weight: 600; }
+.sph__mode.is-active { background: var(--btn-bg, #4a67e8); color: #fff; font-weight: 600; }
 .sph__collapse {
   margin-left: auto; border: 1px solid var(--border, rgba(255,255,255,.08));
   background: transparent; color: var(--text, #f5f7fb); border-radius: 8px;
@@ -31,7 +31,7 @@
 }
 
 .sph__stage {
-  position: relative; height: 460px;
+  position: relative; height: 420px;
   display: grid; place-items: center;
   perspective: 1000px; overflow: hidden;
   transition: height .35s ease, opacity .35s ease;

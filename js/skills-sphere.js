@@ -13,7 +13,7 @@
     "AI & Automation":             "var(--neon, #6384ff)",
     "Cloud & Infrastructure":      "#5b8cff",
     "Enterprise Tools":            "#c98bff",
-    "Post-Production & Studio Ops":"#ffb86b",
+    "Data Center & Network":       "#ffb86b",
     "Web & Hosting":               "#5be0b3"
   };
 
@@ -42,9 +42,10 @@
     { name: "SharePoint",      cat: "Enterprise Tools",            level: "Advanced",   desc: "Site design, libraries, automated flows." },
     { name: "SQL Server",      cat: "Enterprise Tools",            level: "Working",    desc: "Installation, backups, maintenance." },
 
-    { name: "Studio Ops",      cat: "Post-Production & Studio Ops", level: "Advanced",  desc: "Equipment readiness and workflow support." },
-    { name: "AV/VC Rooms",     cat: "Post-Production & Studio Ops", level: "Advanced",  desc: "Hybrid meeting setups and integrations." },
-    { name: "Vendor Coord.",   cat: "Post-Production & Studio Ops", level: "Advanced",  desc: "Global vendor and partner communication." },
+    { name: "Remote Hands",    cat: "Data Center & Network",       level: "Proficient", desc: "On-site L1–L3 remote and smart hands in data centres." },
+    { name: "SD-WAN",          cat: "Data Center & Network",       level: "Proficient", desc: "Deployment, migration and RMA (Cisco ENCS, Silver Peak)." },
+    { name: "Dell EMC",        cat: "Data Center & Network",       level: "Proficient", desc: "Storage installation, configuration and diagnostics." },
+    { name: "Break-fix / RMA", cat: "Data Center & Network",       level: "Proficient", desc: "Hardware diagnostics, part replacement and recovery." },
 
     { name: "WordPress",       cat: "Web & Hosting",               level: "Proficient", desc: "Site design and theme work." },
     { name: "Shared Hosting",  cat: "Web & Hosting",               level: "Proficient", desc: "cPanel, DNS, and hosting management." },

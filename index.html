@@ -13,20 +13,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- mark JS as available + apply saved theme before first paint
+       (content stays visible when JS is off: .reveal only hides under .js) -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var t = localStorage.getItem('theme') ||
+        (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+
   <!-- ============ SEO META ============ -->
-  <title>Irfan Younas — Enterprise IT Support & System Administration</title>
-  <meta name="description" content="Portfolio of Irfan Younas: enterprise IT support and system administration — Microsoft 365, Intune endpoint management, Entra ID, and Exchange Online — plus workflow automation with Power Automate and AI tools, studio operations, and data center support." />
-  <meta name="keywords" content="Irfan Younas Portfolio, Enterprise IT Support, System Administration, Microsoft 365 Administration, Microsoft Intune, Endpoint Management, Microsoft Entra ID, Exchange Online, Conditional Access, Jira Service Management, Workflow Automation, Power Automate, Agentic AI, Studio Operations, Data Center Support" />
+  <title>Irfan Younas — IT Field &amp; Data Centre Services, M365 Administration | Graz, Austria</title>
+  <meta name="description" content="IT field and data centre engineer in Graz, Austria: remote and smart hands, SD-WAN and network deployments, hardware break-fix, server and storage support, plus Microsoft 365 and endpoint administration." />
+  <meta name="keywords" content="Irfan Younas, IT field services Austria, data centre remote hands, smart hands, field engineer Graz, SD-WAN deployment, Cisco ENCS, Silver Peak, hardware break-fix, RMA, Dell EMC storage, Microsoft 365 administration, Intune, Entra ID, workflow automation" />
   <meta name="author" content="Irfan Younas" />
   <link rel="canonical" href="https://portfolio.addify.ae/" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Irfan Younas — Enterprise IT Support & System Administration" />
-  <meta property="og:description" content="Enterprise IT support and system administration: Microsoft 365, endpoint management, workflow automation, studio ops, and data center support." />
+  <meta property="og:site_name" content="Irfan Younas — Portfolio" />
+  <meta property="og:title" content="Irfan Younas — IT Field &amp; Data Centre Services, M365 Administration | Graz, Austria" />
+  <meta property="og:description" content="On-site IT field and data centre services across Austria — remote/smart hands, SD-WAN and network deployments, hardware break-fix — plus Microsoft 365 and endpoint administration." />
   <meta property="og:url" content="https://portfolio.addify.ae/" />
   <meta property="og:image" content="https://portfolio.addify.ae/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Irfan Younas — IT Field &amp; Data Centre Services, Graz, Austria" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Irfan Younas — IT Field &amp; Data Centre Services, M365 Administration | Graz, Austria" />
+  <meta name="twitter:description" content="On-site IT field and data centre services across Austria, plus Microsoft 365 and endpoint administration." />
+  <meta name="twitter:image" content="https://portfolio.addify.ae/assets/og-image.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,13 +62,25 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Irfan Younas",
-    "jobTitle": "Enterprise IT Support & System Administration",
-    "url": "https://portfolio.addify.ae",
-    "knowsAbout": ["Microsoft 365", "Microsoft Intune", "Microsoft Entra ID", "Exchange Online", "Endpoint Management", "Conditional Access", "Data Loss Prevention", "Jira Service Management", "AI Agentic Workflows", "Power Automate", "Azure"]
+    "jobTitle": "IT Field & Data Centre Engineer, Microsoft 365 Administrator",
+    "url": "https://portfolio.addify.ae/",
+    "image": "https://portfolio.addify.ae/assets/og-image.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Graz",
+      "addressRegion": "Styria",
+      "addressCountry": "AT"
+    },
+    "workLocation": { "@type": "Place", "name": "Austria" },
+    "knowsLanguage": ["en", "de"],
+    "sameAs": ["https://www.linkedin.com/in/ifran-younas-71b53b215/"],
+    "knowsAbout": ["Data centre remote hands", "Smart hands", "SD-WAN deployment", "Cisco ENCS", "Silver Peak", "Hardware break-fix and RMA", "Dell EMC storage", "Microsoft 365", "Microsoft Intune", "Microsoft Entra ID", "Power Automate"]
   }
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- ambient background layers -->
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
@@ -58,9 +89,10 @@
 
   <!-- ============ NAV ============ -->
   <header class="nav">
-    <a href="#hero" class="nav__logo">IY<span>.</span></a>
+    <a href="#hero" class="nav__logo">IY<span>.</span><span class="sr-only"> Irfan Younas, back to top</span></a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#about">About</a>
+      <a href="#services">Services</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
@@ -69,27 +101,30 @@
       <a href="#contact">Contact</a>
     </nav>
     <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
-      <span class="theme-toggle__icon">☀</span>
+      <span class="theme-toggle__icon" aria-hidden="true">☀</span>
     </button>
   </header>
 
-  <main>
-    <!-- ============ A) HERO ============ -->
+  <main id="main">
+    <!-- ============ HERO ============ -->
     <section id="hero" class="hero" data-tilt>
       <div class="hero__inner">
         <p class="hero__eyebrow">// portfolio.addify.ae</p>
         <h1 class="hero__name">Irfan Younas</h1>
         <p class="hero__title">
-          Enterprise IT Support &amp; System Administration <span>•</span> Endpoint Management &amp; Workflow Automation (L1/L2) <span>•</span> Studio Ops
+          <span class="hero__seg">IT Field &amp; Data Centre Services</span>
+          <span class="hero__seg"><span class="hero__dot" aria-hidden="true">·</span> Microsoft 365 &amp; Endpoint Administration</span>
+          <span class="hero__seg"><span class="hero__dot" aria-hidden="true">·</span> Workflow Automation</span>
         </p>
+        <p class="hero__meta">Based in Graz, Austria · on-site across Austria · English &amp; German (basic)</p>
         <p class="hero__intro">
-          I support and administer enterprise IT systems — <strong>Microsoft 365</strong>,
-          <strong>endpoint management</strong>, and <strong>identity</strong> — and automate
-          workflows with <strong>Power Automate</strong> and AI tools. I bridge studio operations
-          and IT, working across global, cross-functional teams to keep systems and people moving.
+          I deliver on-site <strong>IT field and data centre services</strong> across Austria —
+          remote and smart hands, SD-WAN and network deployments, hardware break-fix — and administer
+          <strong>Microsoft 365</strong>, Intune and Entra ID, automating workflows with
+          <strong>Power Automate</strong> and AI tools.
         </p>
         <div class="hero__cta">
-          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#services" class="btn btn--primary">View services</a>
           <a href="#contact" class="btn btn--ghost">Get in touch</a>
         </div>
       </div>
@@ -100,129 +135,484 @@
       </div>
     </section>
 
-    <!-- ============ B) ABOUT ============ -->
+    <!-- ============ ABOUT ============ -->
     <section id="about" class="section">
       <h2 class="section__title"><span class="section__num">01</span> About</h2>
       <div class="about">
         <p>
-          Enterprise IT support and system administration across Microsoft 365, endpoint
-          management, and identity, with a track record spanning enterprise infrastructure,
-          data center support, and post-production studio operations. I build
-          <strong>AI-assisted automations</strong> and <strong>agentic workflows</strong>, design
-          <strong>Power Automate</strong> processes, and automate documentation systems that remove
-          manual toil from technical teams.
+          IT field engineer and Microsoft 365 administrator based in Graz, Austria. Since 2020 I have
+          delivered on-site <strong>field and data centre work</strong> across Austria — remote and smart
+          hands, SD-WAN and network deployments, hardware break-fix and RMA — alongside enterprise IT
+          support and system administration across <strong>Microsoft 365</strong>, endpoint management,
+          and identity. I also build <strong>AI-assisted automations</strong> and design
+          <strong>Power Automate</strong> processes that remove manual toil from technical teams.
         </p>
         <ul class="about__highlights">
+          <li>On-site field &amp; data centre services across Austria — HSE-compliant site work</li>
           <li>Strong hands-on experience with Microsoft 365, Intune, Entra ID &amp; Exchange Online</li>
           <li>Atlassian Cloud administration — Jira Service Management permissions &amp; workflows</li>
           <li>Configure security features within Microsoft 365 — Conditional Access, DLP &amp; compliance policies</li>
-          <li>AI-assisted automations &amp; agentic workflows</li>
-          <li>Claude Code 101 Certified</li>
-          <li>Power Automate workflow design &amp; AI documentation systems</li>
-          <li>Post-production &amp; studio operations support</li>
+          <li>AI-assisted automations, agentic workflows &amp; Power Automate</li>
           <li>WordPress + custom-coded web development (addify.ae)</li>
           <li>Global team &amp; vendor collaboration</li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ C) SKILLS MATRIX ============ -->
+    <!-- ============ FIELD & DATA CENTRE SERVICES ============ -->
+    <section id="services" class="section">
+      <h2 class="section__title"><span class="section__num">02</span> Field &amp; Data Centre Services</h2>
+      <div class="services">
+        <!-- build:services -->
+        <article class="service-card reveal">
+          <h3 class="service-card__title">Remote &amp; smart hands</h3>
+          <p class="service-card__desc">On-site L1–L3 remote-hands and smart-hands support.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3 class="service-card__title">SD-WAN &amp; network devices</h3>
+          <p class="service-card__desc">Deployment and migration of SD-WAN and network devices (Cisco ENCS, Silver Peak).</p>
+        </article>
+        <article class="service-card reveal">
+          <h3 class="service-card__title">Hardware break-fix</h3>
+          <p class="service-card__desc">Break-fix, RMA handling and hardware recovery.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3 class="service-card__title">Server &amp; storage</h3>
+          <p class="service-card__desc">Server, blade and Dell EMC storage support.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3 class="service-card__title">IT backfill &amp; site support</h3>
+          <p class="service-card__desc">IT backfill and on-site support for customer sites.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3 class="service-card__title">Device rollouts</h3>
+          <p class="service-card__desc">Device rollouts, e.g. smart-cart deployment.</p>
+        </article>
+        <article class="service-card reveal">
+          <h3 class="service-card__title">HSE-compliant site work</h3>
+          <p class="service-card__desc">Site work under customer HSE inductions and site rules.</p>
+        </article>
+        <!-- /build:services -->
+      </div>
+      <h3 class="section__subtitle">Project references</h3>
+      <div class="refs-wrap">
+        <!-- build:references -->
+        <table class="refs">
+          <caption>Delivered as a subcontracted field engineer for an international IT services provider, 2021–2025.</caption>
+          <thead><tr><th scope="col">Industry</th><th scope="col">Location</th><th scope="col">Scope</th></tr></thead>
+          <tbody>
+            <tr><td data-label="Industry">Parcel logistics</td><td data-label="Location">3 depots — Carinthia, Lower Austria</td><td data-label="Scope">Network and hardware field service</td></tr>
+            <tr><td data-label="Industry">Imaging technology</td><td data-label="Location">Data centre, Vienna</td><td data-label="Scope">2 × Cisco ENCS upgrades</td></tr>
+            <tr><td data-label="Industry">Imaging technology</td><td data-label="Location">Klagenfurt, Carinthia</td><td data-label="Scope">SD-WAN deployment and hardware recovery</td></tr>
+            <tr><td data-label="Industry">Semiconductors</td><td data-label="Location">Gratkorn, Styria</td><td data-label="Scope">On-site field service</td></tr>
+            <tr><td data-label="Industry">Pharmaceuticals</td><td data-label="Location">Vienna</td><td data-label="Scope">3 assignments, incl. IT backfill (2021 and 2022)</td></tr>
+            <tr><td data-label="Industry">Hygiene &amp; water technology</td><td data-label="Location">Vienna</td><td data-label="Scope">Silver Peak SD-WAN RMA</td></tr>
+            <tr><td data-label="Industry">Management consulting</td><td data-label="Location">Customer site</td><td data-label="Scope">Field service</td></tr>
+            <tr><td data-label="Industry">Agriscience</td><td data-label="Location">Parndorf, Burgenland</td><td data-label="Scope">Field service</td></tr>
+            <tr><td data-label="Industry">Retail technology</td><td data-label="Location">Sattledt, Upper Austria</td><td data-label="Scope">33 smart carts deployed</td></tr>
+            <tr><td data-label="Industry">Medical devices</td><td data-label="Location">Brunn am Gebirge, Lower Austria</td><td data-label="Scope">Field service</td></tr>
+            <tr><td data-label="Industry">Industrial manufacturer</td><td data-label="Location">Vienna</td><td data-label="Scope">Site work after HSE induction</td></tr>
+          </tbody>
+        </table>
+        <p class="refs__coverage"><span>Coverage</span> Vienna, Styria, Carinthia, Upper &amp; Lower Austria, Burgenland</p>
+        <!-- /build:references -->
+      </div>
+    </section>
+
+    <!-- ============ SKILLS MATRIX ============ -->
     <section id="skills" class="section">
-      <h2 class="section__title"><span class="section__num">02</span> Skills Matrix</h2>
-      <div class="skills" id="skillsGrid"><!-- populated by js/skills.js --></div>
+      <h2 class="section__title"><span class="section__num">03</span> Skills Matrix</h2>
+      <div class="skills">
+        <!-- build:skills -->
+        <div class="skill-card reveal">
+          <h3 class="skill-card__category">Data Center &amp; Network Support</h3>
+          <ul class="skill-card__items"><li>Data center remote hands</li><li>Dell EMC storage</li><li>Hardware diagnostics</li><li>Faulty-part replacement</li><li>Server &amp; storage support</li><li>Network switch config</li><li>SD-WAN migration</li><li>SLA-driven support</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h3 class="skill-card__category">Cloud &amp; Infrastructure</h3>
+          <ul class="skill-card__items"><li>Microsoft 365 administration</li><li>Microsoft Intune (endpoint management)</li><li>Identity &amp; access (Entra ID)</li><li>Exchange Online administration</li><li>Conditional Access</li><li>Data Loss Prevention (DLP)</li><li>Endpoint compliance (Intune)</li><li>VMware ESXi</li><li>Hyper-V</li><li>Windows Server 2008-2019</li><li>Linux Ubuntu</li><li>macOS</li><li>SCCM</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h3 class="skill-card__category">Enterprise Tools</h3>
+          <ul class="skill-card__items"><li>Atlassian Cloud administration</li><li>Jira Service Management (permissions &amp; workflows)</li><li>ServiceNow</li><li>Jira</li><li>Monday.com</li><li>Adobe CC license mgmt</li><li>Cheqroom</li><li>Incident Management</li><li>SharePoint design &amp; automation</li><li>SQL Server</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h3 class="skill-card__category">AI &amp; Automation</h3>
+          <ul class="skill-card__items"><li>Agentic AI workflows</li><li>AI-assisted development</li><li>Power Automate</li><li>AI documentation systems</li><li>Prompt engineering (Claude, Copilot, ChatGPT)</li><li>Workflow orchestration</li></ul>
+        </div>
+        <div class="skill-card reveal">
+          <h3 class="skill-card__category">Web &amp; Hosting</h3>
+          <ul class="skill-card__items"><li>WordPress site design</li><li>Shared hosting management</li><li>Custom-coded development</li><li>Basic backend integration (Supabase)</li><li>addify.ae</li></ul>
+        </div>
+        <!-- /build:skills -->
+      </div>
       <div id="skillsSphere"></div>
     </section>
 
-    <!-- ============ D) EXPERIENCE ============ -->
+    <!-- ============ EXPERIENCE ============ -->
     <section id="experience" class="section">
-      <h2 class="section__title"><span class="section__num">03</span> Experience</h2>
-      <div class="timeline" id="experienceList"><!-- populated by js/experience.js --></div>
+      <h2 class="section__title"><span class="section__num">04</span> Experience</h2>
+      <div class="timeline">
+        <!-- build:experience -->
+        <div class="timeline-item reveal">
+          <h3 class="timeline-item__role">CTE Support Engineer - HCL / LinkedIn</h3>
+          <p class="timeline-item__company">Graz, Austria | Aug 2021 – Jul 2026</p>
+          <ul class="timeline-item__list">
+            <li>Microsoft 365 administration: Intune endpoint management, Entra ID identity &amp; access, and Exchange Online</li>
+            <li>Atlassian Cloud administration: Jira Service Management permissions and workflows</li>
+            <li>Post-production and studio operations support across global teams</li>
+            <li>Coordination with global vendors, production partners, and internal stakeholders</li>
+            <li>Studio environments, equipment readiness, and workflow troubleshooting</li>
+            <li>AI-powered automation pipelines using Power Automate and agentic AI</li>
+            <li>SharePoint sites, document libraries, and automated content flows</li>
+            <li>Improved ServiceNow (SNOW) and Jira workflows for SLA compliance</li>
+            <li>AI-generated documentation systems using Claude, Copilot, and custom scripts</li>
+            <li>AV/VC room setups, integrations, and hybrid meeting workflows</li>
+          </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <h3 class="timeline-item__role">IT Field Services: Dispatch &amp; Data Centre Remote Hands - Self-Employed</h3>
+          <p class="timeline-item__company">Austria | Apr 2020 – May 2021</p>
+          <ul class="timeline-item__list">
+            <li>On-site dispatch and remote-hands support across enterprise data centers</li>
+            <li>Production hardware support under strict SLAs; faulty-part replacement for servers and storage</li>
+            <li>Dell EMC storage installation, configuration, and diagnostics</li>
+            <li>Hardware diagnostics and component-level troubleshooting</li>
+            <li>Network support: switch configuration, structured cabling, and connectivity checks</li>
+            <li>SD-WAN migration support and remote-hands coordination</li>
+            <li>Dispatched to enterprise sites via field-service partners including AVASO Technology, Ubique, HCL, NTT GN, Force Era, and Canon Europa</li>
+          </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <h3 class="timeline-item__role">IT Support Engineer &amp; Helpdesk Team Leader - Al Sahraa Group</h3>
+          <p class="timeline-item__company">Abu Dhabi, UAE | 2014 – 2019</p>
+          <ul class="timeline-item__list">
+            <li>Led IT infrastructure projects: network design, server deployment, data center ops</li>
+            <li>Windows Server 2012/2016, Active Directory, GPOs, WDS, SCCM, firewalls</li>
+            <li>Supervised the IT Helpdesk with KPI-driven ticket resolution</li>
+            <li>Administered Office 365, SharePoint, Exchange 2013, MX configuration</li>
+            <li>Maintained LAN, routers, switches, APs, CCTV, DVR/NVR, enterprise hardware</li>
+            <li>Database backups, DR readiness, and virtual server maintenance</li>
+          </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <h3 class="timeline-item__role">IT Support Administrator - Al Sadaf Fashions</h3>
+          <p class="timeline-item__company">Abu Dhabi, UAE | 2011 – 2013</p>
+          <ul class="timeline-item__list">
+            <li>Managed IT Helpdesk operations and branch-level infrastructure</li>
+            <li>Configured servers, desktops, networks, and security policies</li>
+            <li>Windows Server 2008, Active Directory, Lotus Domino, secure data sharing</li>
+            <li>SQL Server, backups, and POS systems</li>
+            <li>Sales posting, barcode generation, pricing updates, data backups</li>
+          </ul>
+        </div>
+        <!-- /build:experience -->
+      </div>
     </section>
 
-    <!-- ============ E) AI PROJECTS ============ -->
+    <!-- ============ PROJECTS ============ -->
     <section id="projects" class="section">
-      <h2 class="section__title"><span class="section__num">04</span> AI Projects</h2>
-      <div class="projects" id="projectsGrid"><!-- populated by js/projects.js --></div>
+      <h2 class="section__title"><span class="section__num">05</span> Projects</h2>
+      <div class="projects">
+        <!-- build:projects -->
+        <article class="project-card reveal">
+          <h3 class="project-card__title">Addify: Gulf careers platform</h3>
+          <p class="project-card__desc">Salary benchmarks and free career tools for UAE and GCC job seekers.</p>
+          <div class="project-card__tags"><span class="project-card__tag">Next.js</span><span class="project-card__tag">Custom-coded</span></div>
+          <a class="project-card__link" href="https://addify.ae" target="_blank" rel="noopener">addify.ae &rarr;</a>
+        </article>
+        <article class="project-card reveal">
+          <h3 class="project-card__title">Addify Resume Builder</h3>
+          <p class="project-card__desc">Free resume builder with live preview, an AI summary helper and browser PDF export.</p>
+          <div class="project-card__tags"><span class="project-card__tag">Next.js</span><span class="project-card__tag">AI-assisted</span></div>
+          <a class="project-card__link" href="https://addify.ae/tools/resume-builder" target="_blank" rel="noopener">addify.ae/tools/resume-builder &rarr;</a>
+        </article>
+        <article class="project-card reveal">
+          <h3 class="project-card__title">This portfolio</h3>
+          <p class="project-card__desc">Static HTML/CSS/JS, pre-rendered from one data file and deployed on Vercel.</p>
+          <div class="project-card__tags"><span class="project-card__tag">HTML/CSS/JS</span><span class="project-card__tag">Vercel</span></div>
+          <a class="project-card__link" href="https://github.com/addifyai-glitch/ICT-Portfolio" target="_blank" rel="noopener">github.com/addifyai-glitch/ICT-Portfolio &rarr;</a>
+        </article>
+        <!-- /build:projects -->
+      </div>
       <div class="projects__more">
         <a href="https://linktr.ee/Ifranyounas" target="_blank" rel="noopener" class="btn btn--ghost">
-          View all live projects &rarr;
+          View all &rarr;
         </a>
       </div>
     </section>
 
-    <!-- ============ F) CERTIFICATIONS ============ -->
+    <!-- ============ CERTIFICATIONS ============ -->
     <section id="certs" class="section">
-      <h2 class="section__title"><span class="section__num">05</span> Licenses &amp; Certifications</h2>
-      <div class="certs" id="certsGrid"><!-- populated by js/certs.js --></div>
+      <h2 class="section__title"><span class="section__num">06</span> Licenses &amp; Certifications</h2>
+      <div class="certs">
+        <!-- build:certs -->
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">MCSA</div>
+          <div class="cert-card__body">
+            <strong>MCSA: Microsoft Certified System Administrator</strong>
+            <span>Microsoft | 2012</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">CC</div>
+          <div class="cert-card__body">
+            <strong>Claude Code 101 Certification</strong>
+            <span>Anthropic</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">G</div>
+          <div class="cert-card__body">
+            <strong>Google IT Support Professional</strong>
+            <span>Coursera | Jul 2020</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">SEC</div>
+          <div class="cert-card__body">
+            <strong>IT Security: Defense Against Digital Dark Arts</strong>
+            <span>Coursera | Jun 2020</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">SYS</div>
+          <div class="cert-card__body">
+            <strong>System Administration &amp; IT Infrastructure Services</strong>
+            <span>Coursera | Jun 2020</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">365</div>
+          <div class="cert-card__body">
+            <strong>MS Office 365 for Small Businesses</strong>
+            <span>AOE | Apr 2020</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">DITM</div>
+          <div class="cert-card__body">
+            <strong>Diploma in IT Management</strong>
+            <span>AOE | Sep 2016</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">ICC</div>
+          <div class="cert-card__body">
+            <strong>Introduction to Cloud Computing</strong>
+            <span>Apr 2016</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">TP</div>
+          <div class="cert-card__body">
+            <strong>TPNA SMB - TP-Link Network Associate</strong>
+            <span>TP-Link | Feb 2018</span>
+          </div>
+        </div>
+        <div class="cert-card reveal">
+          <div class="cert-badge" aria-hidden="true">WP</div>
+          <div class="cert-card__body">
+            <strong>WordPress - Blogging on the Web</strong>
+            <span>AOE | Mar 2016</span>
+          </div>
+        </div>
+        <!-- /build:certs -->
+      </div>
     </section>
 
-    <!-- ============ G) MS LEARN ============ -->
+    <!-- ============ MS LEARN ============ -->
     <section id="ms-learn" class="section">
-      <h2 class="section__title"><span class="section__num">06</span> Microsoft Learning</h2>
+      <h2 class="section__title"><span class="section__num">07</span> Microsoft Learning</h2>
       <div class="ms-learn">
         <div class="ms-learn__header">
           <!-- inline SVG monogram — original geometric mark, not Microsoft's trademark logo -->
-          <svg class="ms-learn__monogram" viewBox="0 0 56 56" width="56" height="56" aria-hidden="true">
+          <svg class="ms-learn__monogram" viewBox="0 0 56 56" width="48" height="48" aria-hidden="true">
             <rect x="3"  y="3"  width="23" height="23" rx="4" fill="#0078d4"/>
             <rect x="30" y="3"  width="23" height="23" rx="4" fill="#50e6ff"/>
             <rect x="3"  y="30" width="23" height="23" rx="4" fill="#50e6ff" opacity=".72"/>
             <rect x="30" y="30" width="23" height="23" rx="4" fill="#0078d4" opacity=".72"/>
           </svg>
-          <div class="ms-learn__header-text">
-            <p class="ms-learn__header-title">Microsoft Learning</p>
-            <p class="ms-learn__header-sub">Continuous learning on Microsoft Learn — modules, paths, and badges.</p>
+          <p class="ms-learn__header-sub">Continuous learning on Microsoft Learn — modules, paths, and badges.</p>
+          <a href="https://learn.microsoft.com/en-us/users/irfanyounas-1450/" target="_blank" rel="noopener" class="btn btn--ghost ms-learn__profile-btn">View Microsoft Learn profile &rarr;</a>
+        </div>
+
+        <div class="ms-learn__stats">
+          <!-- build:ms-learn-stats -->
+          <div class="ms-stat"><span class="ms-stat__num">42</span><span class="ms-stat__lbl">Badges</span></div>
+          <div class="ms-stat"><span class="ms-stat__num">6</span><span class="ms-stat__lbl">Trophies</span></div>
+          <div class="ms-stat"><span class="ms-stat__num">8</span><span class="ms-stat__lbl">Level</span></div>
+          <!-- /build:ms-learn-stats -->
+        </div>
+
+        <!-- filters are progressive enhancement: hidden until js/ms-learn.js wires them up -->
+        <div class="ms-learn__filters" role="group" aria-label="Filter by category" hidden>
+          <!-- build:ms-learn-filters -->
+          <button type="button" class="ms-learn__chip is-active" data-cat="all" aria-pressed="true">All</button>
+          <button type="button" class="ms-learn__chip" data-cat="Azure" aria-pressed="false">Azure</button>
+          <button type="button" class="ms-learn__chip" data-cat="AI" aria-pressed="false">AI</button>
+          <button type="button" class="ms-learn__chip" data-cat="M365" aria-pressed="false">M365</button>
+          <button type="button" class="ms-learn__chip" data-cat="Fundamentals" aria-pressed="false">Fundamentals</button>
+          <!-- /build:ms-learn-filters -->
+        </div>
+        <div class="ms-learn__grid" id="msLearnGrid">
+          <!-- build:ms-learn-grid -->
+          <div class="ms-card reveal" data-cat="Azure">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Azure Virtual Desktop Architecture</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">Azure</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
           </div>
-          <a href="https://learn.microsoft.com/en-us/users/irfanyounas-1450/" target="_blank" rel="noopener" class="btn btn--ghost ms-learn__profile-btn">View Microsoft Learn Profile →</a>
+          <div class="ms-card reveal" data-cat="Azure">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Prepare on-premises workloads for migration to Azure</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">Azure</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="Azure">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Set up Azure Migrate for server migration</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">Azure</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="Azure">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Introduction to the Microsoft Azure Well-Architected Framework</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">Azure</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="Azure">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Microsoft Cloud Adoption Framework for Azure</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">Azure</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="Azure">
+            <div class="ms-card__icon ms-card__icon--path" aria-hidden="true">🛤️</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">AZ-305 Microsoft Azure Architect Design Prerequisites</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">Azure</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="AI">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Implement Copilot for Microsoft 365</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">AI</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="AI">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Examine data security and compliance in Copilot for Microsoft 365</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">AI</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="AI">
+            <div class="ms-card__icon ms-card__icon--path" aria-hidden="true">🛤️</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">MS-012 Prepare your organization for Copilot for Microsoft 365</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">AI</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="M365">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Implement lifecycle management and governance for Microsoft Teams</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">M365</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="M365">
+            <div class="ms-card__icon ms-card__icon--badge" aria-hidden="true">🏅</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Understand Microsoft Entra ID</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">M365</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="ms-card reveal" data-cat="Fundamentals">
+            <div class="ms-card__icon ms-card__icon--path" aria-hidden="true">🛤️</div>
+            <div class="ms-card__body">
+              <p class="ms-card__name">Microsoft Azure Fundamentals: Describe Azure architecture and services</p>
+              <div class="ms-card__meta">
+                <span class="ms-card__cat">Fundamentals</span>
+                <span class="ms-card__status ms-card__status--completed">Completed</span>
+              </div>
+            </div>
+          </div>
+          <!-- /build:ms-learn-grid -->
         </div>
-
-        <div class="ms-learn__stats" id="msLearnStats"><!-- populated by js/ms-learn.js --></div>
-
-        <div class="ms-learn__filters" role="group" aria-label="Filter by category">
-          <button class="ms-learn__chip is-active" data-cat="all">All</button>
-          <button class="ms-learn__chip" data-cat="Azure">Azure</button>
-          <button class="ms-learn__chip" data-cat="M365">M365</button>
-          <button class="ms-learn__chip" data-cat="Security">Security</button>
-          <button class="ms-learn__chip" data-cat="AI">AI</button>
-          <button class="ms-learn__chip" data-cat="Fundamentals">Fundamentals</button>
-        </div>
-        <div class="ms-learn__grid" id="msLearnGrid"><!-- populated by js/ms-learn.js --></div>
       </div>
     </section>
 
-    <!-- ============ H) CONTACT ============ -->
+    <!-- ============ CONTACT ============ -->
     <section id="contact" class="section">
-      <h2 class="section__title"><span class="section__num">07</span> Contact</h2>
+      <h2 class="section__title"><span class="section__num">08</span> Contact</h2>
       <div class="contact">
-        <p class="contact__lead">Open to automation, AI, and IT engineering work. Reach out directly.</p>
+        <p class="contact__lead">Business registration in progress — available for partner onboarding.</p>
+        <dl class="contact__details">
+          <div><dt>Email</dt><dd><a href="mailto:hi@addify.ae">hi@addify.ae</a></dd></div>
+          <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/ifran-younas-71b53b215/" target="_blank" rel="noopener">linkedin.com/in/ifran-younas</a></dd></div>
+          <div><dt>Location</dt><dd>Graz, Austria · on-site across Austria</dd></div>
+          <div><dt>Languages</dt><dd>English · German (basic)</dd></div>
+        </dl>
         <div class="contact__actions">
-          <a href="mailto:hi@addify.ae" class="btn btn--primary">hi@addify.ae</a>
-          <a href="https://www.linkedin.com/in/ifran-younas-71b53b215/" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn →</a>
-        </div>
-
-        <div class="contact__form" id="contactForm">
-          <input type="text" id="cf_name" placeholder="Your name" autocomplete="name" />
-          <input type="email" id="cf_email" placeholder="Your email" autocomplete="email" />
-          <textarea id="cf_message" placeholder="Your message" rows="4"></textarea>
-          <button type="button" id="cf_submit" class="btn btn--primary">Send message</button>
-          <p class="contact__status" id="cf_status" role="status"></p>
+          <a href="mailto:hi@addify.ae" class="btn btn--primary">Email me</a>
+          <!-- TODO(owner): add cv.pdf to the site root — this link 404s until the file exists -->
+          <a href="/cv.pdf" class="btn btn--ghost" download>Download CV (PDF)</a>
+          <a href="https://www.linkedin.com/in/ifran-younas-71b53b215/" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn &rarr;</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; <span id="year"></span> Irfan Younas — built &amp; deployed on Vercel.</p>
+    <p>&copy; <span id="year">2026</span> Irfan Younas — built &amp; deployed on Vercel.</p>
+    <!-- TODO(owner): enable after business registration
+    <p><a href="/impressum">Impressum</a></p>
+    -->
   </footer>
 
-  <!-- modular scripts -->
-  <script src="js/data.js"></script>
-  <script src="js/skills.js"></script>
-  <script src="js/experience.js"></script>
-  <script src="js/projects.js"></script>
-  <script src="js/certs.js"></script>
-  <script src="js/ms-learn.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/contact.js"></script>
-  <script src="js/skills-sphere.js"></script>
+  <!-- modular scripts (content is static HTML; these only add interactivity) -->
+  <script src="js/main.js" defer></script>
+  <script src="js/ms-learn.js" defer></script>
+  <script src="js/skills-sphere.js" defer></script>
 </body>
 </html>

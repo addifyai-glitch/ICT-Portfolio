@@ -9,8 +9,8 @@
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
-  padding: 1.25rem 1.5rem;
+  margin-bottom: var(--space-heading);
+  padding: 1rem 1.25rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-card);
@@ -28,19 +28,9 @@
   50%       { filter: drop-shadow(0 0 14px rgba(80,230,255,.55)); transform: scale(1.04); }
 }
 
-.ms-learn__header-text {
+.ms-learn__header-sub {
   flex: 1;
   min-width: 160px;
-}
-
-.ms-learn__header-title {
-  font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: .2rem;
-  color: var(--text);
-}
-
-.ms-learn__header-sub {
   color: var(--text-muted);
   font-size: .88rem;
 }
@@ -50,7 +40,7 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--space-grid);
 }
 
 .ms-stat {
@@ -59,7 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.1rem .75rem;
+  padding: .9rem .75rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-card);
@@ -100,8 +90,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-grid);
 }
+.ms-learn__filters[hidden] { display: none; }
 
 .ms-learn__chip {
   border: 1px solid var(--border);
@@ -121,8 +112,8 @@
 }
 
 .ms-learn__chip.is-active {
-  border-color: var(--accent);
-  background: var(--accent);
+  border-color: var(--btn-bg);
+  background: var(--btn-bg);
   color: #fff;
   font-weight: 600;
 }
@@ -131,7 +122,7 @@
 .ms-learn__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
+  gap: var(--space-grid);
 }
 
 /* ---- card ---- */
@@ -215,7 +206,7 @@
   padding: .1rem .45rem;
 }
 
-.ms-card__status--completed    { background: rgba(52,211,153,.15); color: #34d399; }
+.ms-card__status--completed    { background: rgba(52,211,153,.15); color: var(--ok); }
 .ms-card__status--in-progress  { background: rgba(251,191,36,.15);  color: #fbbf24; }
 
 /* ---- trophy shimmer ---- */

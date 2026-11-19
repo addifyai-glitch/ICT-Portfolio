@@ -10,15 +10,14 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 const themeToggle = document.getElementById('themeToggle');
 const iconEl = themeToggle?.querySelector('.theme-toggle__icon');
 
+/* initial theme is applied by the inline script in <head> (no flash) */
 const applyTheme = theme => {
   document.documentElement.setAttribute('data-theme', theme);
   if (iconEl) iconEl.textContent = theme === 'dark' ? '☀' : '☾';
-  localStorage.setItem('theme', theme);
+  try { localStorage.setItem('theme', theme); } catch (e) {}
 };
 
-const saved = localStorage.getItem('theme');
-const preferred = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
-applyTheme(saved || preferred);
+applyTheme(document.documentElement.getAttribute('data-theme') || 'dark');
 
 themeToggle?.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
@@ -39,7 +38,7 @@ const observeReveals = () => {
   document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 };
 
-/* run after renderers have injected DOM */
+/* content is static HTML, so reveals can be observed straight away */
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', observeReveals);
 } else {

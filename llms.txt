@@ -1,0 +1,29 @@
+# Irfan Younas — IT Field & Data Centre Services, Microsoft 365 Administration
+
+> IT field and data centre engineer based in Graz, Austria, working on-site across Austria (English, basic German). Delivers remote/smart hands, SD-WAN and network deployments, hardware break-fix and RMA, server and storage support, and Microsoft 365 / endpoint administration with workflow automation. Business registration in progress; available for partner onboarding.
+
+## Services
+
+- On-site L1–L3 remote-hands and smart-hands support
+- SD-WAN and network device deployment and migration (Cisco ENCS, Silver Peak)
+- Hardware break-fix, RMA and recovery
+- Server, blade and Dell EMC storage support
+- IT backfill and site support
+- Device rollouts (e.g. smart-cart deployment)
+- HSE-compliant site work
+
+## Coverage
+
+Vienna, Styria, Carinthia, Upper & Lower Austria, Burgenland. Project references (2021–2025, as a subcontracted field engineer for an international IT services provider) span parcel logistics, imaging technology, semiconductors, pharmaceuticals, hygiene & water technology, agriscience, retail technology, medical devices and industrial manufacturing.
+
+## Also
+
+- Microsoft 365 administration: Intune, Entra ID, Exchange Online, Conditional Access, DLP
+- Atlassian Cloud / Jira Service Management administration
+- Workflow automation with Power Automate and AI-assisted tooling
+
+## Links
+
+- [Portfolio](https://portfolio.addify.ae/)
+- [LinkedIn](https://www.linkedin.com/in/ifran-younas-71b53b215/)
+- Contact: hi@addify.ae
