@@ -6,7 +6,7 @@
 
 .sph {
   --sph-size: 360px;
-  margin-top: 2rem;
+  margin-top: var(--space-block, 2rem);
   border: 1px solid var(--border, rgba(255,255,255,.08));
   border-radius: var(--radius, 16px);
   background: var(--bg-card, #141826);

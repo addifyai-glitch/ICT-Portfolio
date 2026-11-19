@@ -9,7 +9,7 @@
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-heading);
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -50,7 +50,7 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 1.75rem;
+  margin-bottom: var(--space-grid);
 }
 
 .ms-stat {
@@ -100,7 +100,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: .5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-grid);
 }
 
 .ms-learn__chip {
@@ -131,7 +131,7 @@
 .ms-learn__grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem;
+  gap: var(--space-grid);
 }
 
 /* ---- card ---- */
